@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Corona</string>
+    <string name="no_network">No internet connection.</string>
+    <string name="key_filter">key_filter</string>
+    <string name="pref_filter">Filter countries</string>
+
+    <string name="pref_order">Change country order</string>
+    <string name="summary_about">Developed by a bored developer in quarantine. The app does not collect any kind of information. Not even error logs. The api provider (rapidapi.com) may record your IP address.</string>
+    <string name="key_flag_icons">key_flag_icons</string>
+    <string name="pref_flag_icons">Icons made by Freepik</string>
+    <string name="key_api">key_api</string>
+    <string name="pref_api">Coronavirus monitor API by astsiatsko</string>
+    <string name="pref_stay_healthy">Stay healthy</string>
+    <string name="key_donate">key_donate</string>
+    <string name="donate">Donate to Covid-19 Response Fund</string>
+    <string name="key_country_order">pref_country_order</string>
+    <string name="key_who">key_who</string>
+    <string-array name="pref_order_list">
+        <item>Total Deaths</item>
+        <item>Total Cases</item>
+        <item>Name</item>
+    </string-array>
+    <string-array name="pref_order_values">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+</resources>

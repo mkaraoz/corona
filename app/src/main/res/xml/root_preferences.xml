@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ListPreference
+        android:defaultValue="0"
+        android:entries="@array/pref_order_list"
+        android:entryValues="@array/pref_order_values"
+        android:key="@string/key_country_order"
+        android:title="@string/pref_order"
+        app:iconSpaceReserved="false"
+        app:summary="Total Deaths"
+        app:useSimpleSummaryProvider="true" />
+
+    <PreferenceCategory
+        android:title="About"
+        app:iconSpaceReserved="false">
+
+        <Preference
+            android:key="@string/key_api"
+            android:title="@string/pref_api"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://rapidapi.com/astsiatsko/api/coronavirus-monitor" />
+        </Preference>
+
+        <Preference
+            android:key="@string/key_flag_icons"
+            android:title="@string/pref_flag_icons"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.flaticon.com/authors/freepik" />
+        </Preference>
+
+        <Preference
+            android:key="@string/key_who"
+            android:title="@string/pref_stay_healthy"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public" />
+        </Preference>
+
+        <Preference
+            android:key="@string/key_donate"
+            android:title="@string/donate"
+            app:iconSpaceReserved="false">
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:data="https://covid19responsefund.org/" />
+        </Preference>
+
+        <Preference
+            android:selectable="false"
+            android:summary="@string/summary_about"
+            app:iconSpaceReserved="false" />
+    </PreferenceCategory>
+
+
+</PreferenceScreen>
