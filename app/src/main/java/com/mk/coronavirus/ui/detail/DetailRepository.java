@@ -45,7 +45,7 @@ class DetailRepository {
                             List<CountryHistoricalData> historicalDataList = new ArrayList<>();
 
                             //reverse the list
-                            Collections.reverse(statByCountryList);
+                            // Collections.reverse(statByCountryList);
                             String currentDate = "";
                             for (StatByCountry stat : statByCountryList) {
                                 String date = stat.getRecordDate().substring(0, 10);

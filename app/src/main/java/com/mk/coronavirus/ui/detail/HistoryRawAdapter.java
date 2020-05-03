@@ -81,7 +81,8 @@ class HistoryRawAdapter extends RecyclerView.Adapter<HistoryRawAdapter.ViewHolde
         if (datarow == null) return;
         holder.tvDate.setText(datarow.getDate());
         holder.tvTotalDeathCount.setText(String.valueOf(datarow.getTotalDeaths()));
-        holder.tvTotalCaseCount.setText(String.valueOf(datarow.getTotalCases()));
+        int activeCount = datarow.getTotalCases() - datarow.getTotalRecovered() - datarow.getNewDeaths();
+        holder.tvActiveCaseCount.setText(String.valueOf(activeCount));
         holder.tvNewDeathCount.setText(String.valueOf(datarow.getNewDeaths()));
         holder.tvNewCaseCount.setText(String.valueOf(datarow.getNewCases()));
     }
@@ -94,7 +95,7 @@ class HistoryRawAdapter extends RecyclerView.Adapter<HistoryRawAdapter.ViewHolde
     public class ViewHolder extends RecyclerView.ViewHolder {
         TextView tvDate;
         TextView tvTotalDeathCount;
-        TextView tvTotalCaseCount;
+        TextView tvActiveCaseCount;
         TextView tvNewDeathCount;
         TextView tvNewCaseCount;
 
@@ -102,7 +103,7 @@ class HistoryRawAdapter extends RecyclerView.Adapter<HistoryRawAdapter.ViewHolde
             super(itemView);
             tvDate = itemView.findViewById(R.id.tvDate);
             tvTotalDeathCount = itemView.findViewById(R.id.tvTotalDeaths);
-            tvTotalCaseCount = itemView.findViewById(R.id.tvTotalCases);
+            tvActiveCaseCount = itemView.findViewById(R.id.tvTotalCases);
             tvNewDeathCount = itemView.findViewById(R.id.tvNewDeaths);
             tvNewCaseCount = itemView.findViewById(R.id.tvNewCases);
         }

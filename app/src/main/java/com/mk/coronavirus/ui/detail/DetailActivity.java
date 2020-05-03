@@ -15,6 +15,7 @@ import androidx.preference.PreferenceManager;
 import androidx.recyclerview.widget.DefaultItemAnimator;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
+import androidx.recyclerview.widget.SimpleItemAnimator;
 
 import com.mk.coronavirus.R;
 import com.mk.coronavirus.db.model.CountryHistoricalData;
@@ -61,8 +62,12 @@ public class DetailActivity extends AppCompatActivity implements NetworkCallback
         historyRawAdapter = new HistoryRawAdapter(DetailActivity.this, new ArrayList<>());
         RecyclerView recyclerView = findViewById(R.id.rvHistory);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        RecyclerView.ItemAnimator animator = recyclerView.getItemAnimator();
+        if (animator instanceof SimpleItemAnimator) {
+            ((SimpleItemAnimator) animator).setSupportsChangeAnimations(false);
+        }
         recyclerView.setAdapter(historyRawAdapter);
+        recyclerView.getItemAnimator().setChangeDuration(0);
 
         viewModel = new ViewModelProvider(this).get(DetailViewModel.class);
 
