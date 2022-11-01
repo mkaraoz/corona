@@ -12,7 +12,6 @@ import androidx.recyclerview.widget.DiffUtil;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.mk.coronavirus.R;
-
 import java.util.List;
 
 public class DatarowAdapter extends RecyclerView.Adapter<DatarowAdapter.ViewHolder> {
